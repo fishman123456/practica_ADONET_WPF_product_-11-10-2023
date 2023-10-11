@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practica_ADONET_WPF_product_-11-10-2023", "practica_ADONET_WPF_product_-11-10-2023.csproj", "{E2AF0695-3771-496D-B701-FC0662F36DC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2AF0695-3771-496D-B701-FC0662F36DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AF0695-3771-496D-B701-FC0662F36DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AF0695-3771-496D-B701-FC0662F36DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AF0695-3771-496D-B701-FC0662F36DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F00BFB2-99B2-4ED3-8B0E-5556EBF0B46B}
+	EndGlobalSection
+EndGlobal
