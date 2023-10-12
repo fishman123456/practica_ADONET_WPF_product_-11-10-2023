@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:practica_ADONET_WPF_product__11_10_2023"
         xmlns:Collections="clr-namespace:System.Collections;assembly=mscorlib" x:Class="practica_ADONET_WPF_product__11_10_2023.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="250" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">

@@ -1,39 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.Common;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace practica_ADONET_WPF_product__11_10_2023
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
-        // вспомогательная процедура, создающая подключение к БД
-        private SqlConnection GetDbConnection()
-        {
-            // обработка исключений будет выполняться выше по стеку
-            string connectionString = ConfigurationManager.ConnectionStrings["LocalConnection"].ConnectionString;
-            SqlConnection connection = new SqlConnection(connectionString);
-             //connection.Open(); //- в отсоединенном режиме подключение открывает и закрывает DbDataAdapter
-            return connection;
-        }
-
+        // создаем приватный обьект для видимости методов
+        private db_connect Db_Connect;
+        // вспомогательные поля
+        private SqlDataAdapter dataAdapter;
+        private DataSet dataSet;
         // вспомогательный метод обновления данных
         private void fillData()
         {
@@ -45,16 +27,17 @@ namespace practica_ADONET_WPF_product__11_10_2023
         public MainWindow()
         {
             InitializeComponent();
+            // создаем новый экземпляр обьекта для соединения
+            Db_Connect = new db_connect();
             // подготовка объектов
-            dataAdapter = new SqlDataAdapter(fillCmd, GetDbConnection());
+            dataAdapter = new SqlDataAdapter(fillCmd, Db_Connect.GetDbConnection());
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);  // строка заполняет INSERT/UPDATE/DELETE-команды
             // реализацией по умолчанию
         }
 
-        // вспомогательные поля
-        private SqlDataAdapter dataAdapter;
-        private DataSet dataSet;
-        private string fillCmd = "SELECT * from product_t;";
+       
+        private string fillCmd = "SELECT * from product_t p,  supplier_t s, type_t t " +
+            "where  p.type_id_f = t.id_f and p.supplier_id_f = s.id_f;";
 
         private void fillBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -63,9 +46,15 @@ namespace practica_ADONET_WPF_product__11_10_2023
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
-            dataAdapter.Update(dataSet, "product_t");
-            fillData();
-
+            try
+            {
+                dataAdapter.Update(dataSet, "product_t");
+                fillData();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

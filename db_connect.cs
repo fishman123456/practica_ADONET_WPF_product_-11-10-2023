@@ -21,7 +21,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
 {
     public class db_connect
     {
-        private SqlConnection GetDbConnection()
+        public SqlConnection GetDbConnection()
         {
             // обработка исключений будет выполняться выше по стеку
             string connectionString = ConfigurationManager.ConnectionStrings["LocalConnection"].ConnectionString;
