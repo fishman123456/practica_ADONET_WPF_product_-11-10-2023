@@ -13,6 +13,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
             // connection.Open(); - в отсоединенном режиме подключение открывает и закрывает DbDataAdapter
             return connection;
         }
+        // метод проверки соединения (есть или нет) пока не работает 12-10-2023
         public void PingConnection()
         {
             using (SqlConnection connection = GetDbConnection()) { }

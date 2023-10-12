@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:practica_ADONET_WPF_product__11_10_2023"
         xmlns:Collections="clr-namespace:System.Collections;assembly=mscorlib" x:Class="practica_ADONET_WPF_product__11_10_2023.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="250" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="450" Width="850" MinWidth="850" MinHeight="250" WindowStartupLocation="CenterScreen" FontSize="16">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal" >
                 <Button x:Name="testconbtn"   Content=" Test Connection "  Margin="10" Click="testconbtn_Click"/>
                 <Button x:Name="fillBtn" Content="Fill" Width="100" Margin="10" Click="fillBtn_Click"/>
                 <Button x:Name="updateBtn" Content="Update" Width="100" Margin="10" Click="updateBtn_Click"/>
-                <ComboBox x:Name="zaprosCombaBox" Width="400"  Margin="10" >
+                <ComboBox x:Name="zaprosComboBox" Width="400"  Margin="10" SelectionChanged="zaprosComboBox_SelectionChanged" >
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
@@ -63,10 +63,41 @@
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel>
+                            <TextBlock FontSize="16">
+             Показать товары, заданной категории
+                            </TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel>
+                            <TextBlock FontSize="16">
+             Показать товары, заданного поставщика 
+                            </TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel>
+                            <TextBlock FontSize="16">
+             Показать самый старый товар на складе 
+                            </TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel>
+                            <TextBlock FontSize="16">
+             Показать среднее количество товаров по каждому типу товара
+                            </TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <!-- вывод результатов -->
-            <DataGrid x:Name="dataGrid"  Height="900"/>
+            <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
+                <Button x:Name="AppQveryBtn" FontSize="16" Content="применить запрос" HorizontalAlignment="Right" Click="AppQveryBtn_Click"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
