@@ -77,11 +77,11 @@ namespace practica_ADONET_WPF_product__11_10_2023
             {
                 Db_con.PingConnection();
                 
-                //MessageBox.Show("Подключено к базе");
+                MessageBox.Show("Подключено к базе");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Не Подключено к базе" + ex.ToString());
+                MessageBox.Show("Не Подключено к базе" + ex.Message.ToString());
             }
         }
         // после выбора из combobox применяем запрос--- пока не работает
