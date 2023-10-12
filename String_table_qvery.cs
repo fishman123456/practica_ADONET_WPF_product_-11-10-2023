@@ -21,27 +21,26 @@ namespace practica_ADONET_WPF_product__11_10_2023
         {
             List<string> list = new List<string>();
             // Отображение всей информации о товаре
-
-            string zero = "SELECT * from product_t p, type_t";
+            string zero = "SELECT * from product_t p, type_t, supplier_t ";
             // Отображение всех типов товаров
-            string first = "1";
+            string first = "SELECT * from  type_t";
             // Отображение всех поставщиков
-            string second = "2";
+            string second = "SELECT * from supplier_t ";
             // Показать товар с максимальным количеством
-            string thild = "3";
+            string thild = "select max (p.count_f) from product_t p";
             // Показать товар с минимальным количеством
-            string fourth = "4";
-            // Показать товар с минимальной себестоимостью
-            string fifth = "5";
-            // Показать товар с максимальной себестоимостью
-            string sixth = "6";
+            string fourth = "select min (p.count_f) from product_t p";
+            // Показать товар с минимальной себестоимостью self_cost_f
+            string fifth = "select min (p.self_cost_f) from product_t p";
+            // Показать товар с максимальной себестоимостью self_cost_f
+            string sixth = "select max (p.self_cost_f) from product_t p";
             // Показать товары, заданной категории
             string seventh = "7";
             // Показать товары, заданного поставщика
             string eighth = "8";
-            // Показать самый старый товар на складе
+            // Показать самый старый товар на складе date_f
             string ninth = "9";
-            // Показать среднее количество товаров по каждому типу товара
+            // Показать среднее количество товаров по каждому типу товара avg count
             string tenth = "10";
             // резерв  ++
             string eleven = "11";

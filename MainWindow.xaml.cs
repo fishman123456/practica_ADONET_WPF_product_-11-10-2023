@@ -49,7 +49,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
         }
         string tablenum = String_table_qvery.table.product_t.ToString();
 
-        private string fillCmd = "SELECT * from product_t p, type_t";
+        private string fillCmd = "SELECT * from product_t p";
         //  ,supplier_t s, type_t t " +
         //  "where  p.type_id_f = t.id_f and p.supplier_id_f = s.id_f;";
         private void fillBtn_Click(object sender, RoutedEventArgs e)
