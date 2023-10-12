@@ -13,14 +13,14 @@ C:\Users\Fishman_1\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\
 C:\Users\Fishman_1\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023.csproj.CoreCompileInputs.cache
 C:\Users\Fishman_1\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023.exe
 C:\Users\Fishman_1\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023.pdb
-C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.exe.config
-C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.exe
-C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.pdb
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023.csproj.AssemblyReference.cache
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\MainWindow.g.cs
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\App.g.cs
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023_MarkupCompile.cache
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023_MarkupCompile.lref
+C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.exe.config
+C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.exe
+C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\bin\Debug\practica_ADONET_WPF_product_-11-10-2023.pdb
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\MainWindow.baml
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product_-11-10-2023.g.resources
 C:\Users\Fishman.DB.CORP\Documents\GitHub\practica_ADONET_WPF_product_-11-10-2023\obj\Debug\practica_ADONET_WPF_product__11_10_2023.Properties.Resources.resources
