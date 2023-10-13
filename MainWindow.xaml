@@ -16,7 +16,11 @@
                
             </StackPanel>
             <!-- вывод результатов -->
-            <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            
+            <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible">
+
+            </DataGrid>
+            
             <StackPanel Orientation="Horizontal" Margin="10" Width="1000" HorizontalAlignment="Center" >
                 <TextBox  x:Name="typeftextbox" Width="200" Grid.Row="1" Grid.Column="4" Margin="10" Text="категория"  />
                 <TextBox  x:Name="suppliertextbox" Width="200" Grid.Row="1" Grid.Column="3" Margin="10" Text="поставщик" />

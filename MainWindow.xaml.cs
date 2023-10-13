@@ -49,8 +49,8 @@ namespace practica_ADONET_WPF_product__11_10_2023
             //c реализацией по умолчанию
         }
         string tablenum = String_table_qvery.table.product_t.ToString();
-
-        private string fillCmd = "SELECT * from product_t p";
+        // выводим все данные со всех таблиц
+        private string fillCmd = "SELECT * from product_t";
         //  ,supplier_t s, type_t t " +
         //  "where  p.type_id_f = t.id_f and p.supplier_id_f = s.id_f;";
         private void fillBtn_Click(object sender, RoutedEventArgs e)
@@ -108,6 +108,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
             dataAdapter = new SqlDataAdapter(fillCmd, Db_Connect.GetDbConnection());
             // обновляем грид
             fillData();
+            num = 0;
         }
 
     }
