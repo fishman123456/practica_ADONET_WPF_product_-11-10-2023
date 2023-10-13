@@ -18,8 +18,8 @@
             <!-- вывод результатов -->
             <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" />
             <StackPanel Orientation="Horizontal" Margin="10" Width="1000" HorizontalAlignment="Center" >
-                <TextBox  x:Name="type_f" Width="200" Grid.Row="1" Grid.Column="4" Margin="10" />
-                <TextBox  x:Name="supplierf" Width="200" Grid.Row="1" Grid.Column="3" Margin="10"/>
+                <TextBox  x:Name="typeftextbox" Width="200" Grid.Row="1" Grid.Column="4" Margin="10" Text="категория"  />
+                <TextBox  x:Name="suppliertextbox" Width="200" Grid.Row="1" Grid.Column="3" Margin="10" Text="поставщик" />
 
                 <ComboBox x:Name="zaprosComboBox" Width="500"  Margin="10" SelectionChanged="zaprosComboBox_SelectionChanged" >
                     <ComboBoxItem>

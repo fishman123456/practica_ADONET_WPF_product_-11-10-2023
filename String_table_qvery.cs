@@ -3,11 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace practica_ADONET_WPF_product__11_10_2023
 {
     public class String_table_qvery
     {
+        // поле для ввода типа товара
+       public string typefstr {  get; set; }
+        // поле для ввода поставщика
+       public string supplierfstr {  get; set; }
+
+      public  String_table_qvery() { }
+
+        // метод получения строки из тексбокса тип товара
+      public string poleTypef(string str)
+        {
+            typefstr = str;
+
+            return typefstr;
+        }
+        // метод получения строки из тексбокса поставщик
+        public string poleSupplierf(string str)
+        {
+            supplierfstr = str;
+
+            return supplierfstr;
+        }
+
+
         // перечисление для выбора таблиц
         public enum table
         {
@@ -43,10 +67,13 @@ namespace practica_ADONET_WPF_product__11_10_2023
             list.Add("select  p.* from product_t p" +
                 " where p.self_cost_f =" +
                 "( select max(p2.self_cost_f) from product_t p2 )");
+
             // 7.Показать товары, заданной категории
-            list.Add("7");
+            list.Add("SELECT * from product_t, supplier_t, type_t t  where t.type_f like '" + typefstr + "%';");
+
             // 8.Показать товары, заданного поставщика
-            list.Add("8");
+            list.Add("SELECT * from product_t, supplier_t s, type_t t  where s.supplier_f like '" + supplierfstr + "%';");
+
             // 9.Показать самый старый товар на складе date_f
             list.Add("select  p.* from product_t p" +
                  " where p.date_f =" +

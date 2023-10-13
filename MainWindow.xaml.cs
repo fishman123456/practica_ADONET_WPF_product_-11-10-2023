@@ -13,6 +13,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
 
     public partial class MainWindow : Window
     {
+
         // создаем приватный обьект для видимости методов
         private db_connect Db_Connect;
         // вспомогательный класс для запросов и выбора таблиц
@@ -26,7 +27,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
             try
             {
                 // перечисление для выбора таблиц, сокращаем запись
-              string tablenum = String_table_qvery.table.product_t.ToString();
+                string tablenum = String_table_qvery.table.product_t.ToString();
                 // вытягивание данных из БД согласно запросу
                 dataSet = new DataSet();    // в этот DataSet будет выполняться запись результата вытягивания
                 dataAdapter.Fill(dataSet, tablenum);  // выгружаем данные из БД и сохраняем в DataSet
@@ -76,7 +77,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
             try
             {
                 Db_con.PingConnection();
-                
+
                 MessageBox.Show("Подключено к базе");
             }
             catch (Exception ex)
@@ -87,21 +88,27 @@ namespace practica_ADONET_WPF_product__11_10_2023
         // после выбора из combobox применяем запрос--- пока не работает
         private void AppQveryBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+
             MessageBox.Show(zaprosComboBox.ToString());
         }
         // выбираем в комбобоксе по индексу и делаем запрос - работает
         private void zaprosComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int num = ((short)zaprosComboBox.SelectedIndex);
-           // MessageBox.Show(zaprosComboBox.SelectedIndex.ToString());
+            // MessageBox.Show(zaprosComboBox.SelectedIndex.ToString());
             String_table_qvery string_Table_Qvery = new String_table_qvery();
+            // берем текстбокс по поставщикам
+            string_Table_Qvery.poleSupplierf(suppliertextbox.Text.ToString());
+            // берем текстбокс по типу оборудования
+            string_Table_Qvery.poleTypef(typeftextbox.Text.ToString());
             // присваиваем строке запрос из списка по индексу 
             fillCmd = string_Table_Qvery.ListString_qvery(num);
             // передаем команду в дата адаптер
+
             dataAdapter = new SqlDataAdapter(fillCmd, Db_Connect.GetDbConnection());
             // обновляем грид
             fillData();
         }
+
     }
 }
