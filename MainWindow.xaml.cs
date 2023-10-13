@@ -77,7 +77,7 @@ namespace practica_ADONET_WPF_product__11_10_2023
             {
                 Db_con.PingConnection();
                 
-                //MessageBox.Show("Подключено к базе");
+                MessageBox.Show("Подключено к базе");
             }
             catch (Exception ex)
             {
@@ -94,9 +94,14 @@ namespace practica_ADONET_WPF_product__11_10_2023
         private void zaprosComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int num = ((short)zaprosComboBox.SelectedIndex);
-            MessageBox.Show(zaprosComboBox.SelectedIndex.ToString());
+           // MessageBox.Show(zaprosComboBox.SelectedIndex.ToString());
             String_table_qvery string_Table_Qvery = new String_table_qvery();
-            MessageBox.Show(string_Table_Qvery.ListString_qvery(num));
+            // присваиваем строке запрос из списка по индексу 
+            fillCmd = string_Table_Qvery.ListString_qvery(num);
+            // передаем команду в дата адаптер
+            dataAdapter = new SqlDataAdapter(fillCmd, Db_Connect.GetDbConnection());
+            // обновляем грид
+            fillData();
         }
     }
 }

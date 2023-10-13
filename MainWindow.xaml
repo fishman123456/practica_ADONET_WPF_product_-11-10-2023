@@ -6,97 +6,102 @@
         xmlns:local="clr-namespace:practica_ADONET_WPF_product__11_10_2023"
         xmlns:Collections="clr-namespace:System.Collections;assembly=mscorlib" x:Class="practica_ADONET_WPF_product__11_10_2023.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="850" MinWidth="850" MinHeight="250" WindowStartupLocation="CenterScreen" FontSize="16">
+        Title="MainWindow" Height="450" Width="1141" MinWidth="850" MinHeight="250" WindowStartupLocation="CenterScreen" FontSize="16">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal" >
                 <Button x:Name="testconbtn"   Content=" Test Connection "  Margin="10" Click="testconbtn_Click"/>
                 <Button x:Name="fillBtn" Content="Fill" Width="100" Margin="10" Click="fillBtn_Click"/>
                 <Button x:Name="updateBtn" Content="Update" Width="100" Margin="10" Click="updateBtn_Click"/>
-                <ComboBox x:Name="zaprosComboBox" Width="400"  Margin="10" SelectionChanged="zaprosComboBox_SelectionChanged" >
+               
+            </StackPanel>
+            <!-- вывод результатов -->
+            <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            <StackPanel Orientation="Horizontal" Margin="10" Width="1000" HorizontalAlignment="Center" >
+                <TextBox  x:Name="type_f" Width="200" Grid.Row="1" Grid.Column="4" Margin="10" />
+                <TextBox  x:Name="supplierf" Width="200" Grid.Row="1" Grid.Column="3" Margin="10"/>
+
+                <ComboBox x:Name="zaprosComboBox" Width="500"  Margin="10" SelectionChanged="zaprosComboBox_SelectionChanged" >
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Отображение всей информации о товаре
+                     Отображение всей информации о товаре
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Отображение всех типов товаров
+                     Отображение всех типов товаров
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Отображение всех поставщиков
+                     Отображение всех поставщиков
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Показать товар с максимальным количеством
+                     Показать товар с максимальным количеством
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Показать товар с минимальным количеством
+                     Показать товар с минимальным количеством
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                 Показать товар с минимальной себестоимостью
+                     Показать товар с минимальной себестоимостью
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-                                Показать товар с максимальной себестоимостью
+                     Показать товар с максимальной себестоимостью
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-             Показать товары, заданной категории
+                     Показать товары, заданной категории
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-             Показать товары, заданного поставщика 
+                     Показать товары, заданного поставщика
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-             Показать самый старый товар на складе 
+                     Показать самый старый товар на складе
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel>
                             <TextBlock FontSize="16">
-             Показать среднее количество товаров по каждому типу товара
+                     Показать среднее количество товаров по каждому типу товара
                             </TextBlock>
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
-            </StackPanel>
-            <!-- вывод результатов -->
-            <DataGrid x:Name="dataGrid"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" />
-            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
-                <Button x:Name="AppQveryBtn" FontSize="16" Content="применить запрос" HorizontalAlignment="Right" Click="AppQveryBtn_Click"/>
+               
+               
             </StackPanel>
         </StackPanel>
     </Grid>
