@@ -12,7 +12,10 @@
             <StackPanel Orientation="Horizontal" >
                 <Button x:Name="testconbtn"   Content=" Test Connection "  Margin="10" Click="testconbtn_Click"/>
                 <Button x:Name="fillBtn" Content="Fill" Width="100" Margin="10" Click="fillBtn_Click"/>
-                <Button x:Name="updateBtn" Content="Update" Width="100" Margin="10" Click="updateBtn_Click"/>
+                <Button x:Name="updateBtn" Content="Update" Width="100" Margin="10" Click="updateBtn_Click" />
+                
+               <!-- <Button x:Name="addSupplierBtn" Content="добавить поставщика" Width="180" Margin="10" Click="addSupplierBtn_Click"/>
+                <Button x:Name="addTypeBtn" Content="добавить товар" Width="180" Margin="10" Click="addTypeBtn_Click" />-->
                
             </StackPanel>
             <!-- вывод результатов -->
